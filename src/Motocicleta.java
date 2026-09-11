@@ -1,9 +1,5 @@
 import javax.swing.JOptionPane;
 
-/**
- * Clase hija que representa una Motocicleta.
- * Hereda de Vehiculo y agrega cilindraje y tipo de motocicleta.
- */
 public class Motocicleta extends Vehiculo {
 
     private int cilindraje;
@@ -14,7 +10,7 @@ public class Motocicleta extends Vehiculo {
     }
 
     public Motocicleta(String codigo, String marca, String modelo, String anio, double precio,
-                        int cilindraje, String tipoMotocicleta) {
+            int cilindraje, String tipoMotocicleta) {
         super(codigo, marca, modelo, anio, precio);
         this.cilindraje = cilindraje;
         this.tipoMotocicleta = tipoMotocicleta;
@@ -41,14 +37,15 @@ public class Motocicleta extends Vehiculo {
         super.ingresarDatos();
         String cilindrajeTexto = JOptionPane.showInputDialog("Ingrese el cilindraje (cc):");
         cilindraje = Integer.parseInt(cilindrajeTexto);
-        tipoMotocicleta = JOptionPane.showInputDialog("Ingrese el tipo de motocicleta (Deportiva, Urbana, Trabajo, etc.):");
+        tipoMotocicleta = JOptionPane
+                .showInputDialog("Ingrese el tipo de motocicleta (Deportiva, Urbana, Trabajo, etc.):");
     }
 
     @Override
     public String mostrarDatos() {
         return "===== MOTOCICLETA =====\n"
-             + super.mostrarDatos() + "\n"
-             + "Cilindraje: " + cilindraje + " cc\n"
-             + "Tipo de motocicleta: " + tipoMotocicleta;
+                + super.mostrarDatos() + "\n"
+                + "Cilindraje: " + cilindraje + " cc\n"
+                + "Tipo de motocicleta: " + tipoMotocicleta;
     }
 }

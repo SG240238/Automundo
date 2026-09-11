@@ -1,9 +1,5 @@
 import javax.swing.JOptionPane;
 
-/**
- * Clase hija que representa un Camión.
- * Hereda de Vehiculo y agrega capacidad de carga y cantidad de ejes.
- */
 public class Camion extends Vehiculo {
 
     private double capacidadCarga;
@@ -14,7 +10,7 @@ public class Camion extends Vehiculo {
     }
 
     public Camion(String codigo, String marca, String modelo, String anio, double precio,
-                  double capacidadCarga, int cantidadEjes) {
+            double capacidadCarga, int cantidadEjes) {
         super(codigo, marca, modelo, anio, precio);
         this.capacidadCarga = capacidadCarga;
         this.cantidadEjes = cantidadEjes;
@@ -48,8 +44,8 @@ public class Camion extends Vehiculo {
     @Override
     public String mostrarDatos() {
         return "===== CAMIÓN =====\n"
-             + super.mostrarDatos() + "\n"
-             + "Capacidad de carga: " + capacidadCarga + " toneladas\n"
-             + "Cantidad de ejes: " + cantidadEjes;
+                + super.mostrarDatos() + "\n"
+                + "Capacidad de carga: " + capacidadCarga + " toneladas\n"
+                + "Cantidad de ejes: " + cantidadEjes;
     }
 }

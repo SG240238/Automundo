@@ -1,10 +1,5 @@
 import javax.swing.JOptionPane;
 
-/**
- * Clase hija que representa un Automóvil.
- * Hereda de Vehiculo (código, marca, modelo, año, precio)
- * y agrega sus propios atributos: cantidad de puertas y tipo de combustible.
- */
 public class Automovil extends Vehiculo {
 
     private int cantidadPuertas;
@@ -15,7 +10,7 @@ public class Automovil extends Vehiculo {
     }
 
     public Automovil(String codigo, String marca, String modelo, String anio, double precio,
-                      int cantidadPuertas, String tipoCombustible) {
+            int cantidadPuertas, String tipoCombustible) {
         super(codigo, marca, modelo, anio, precio);
         this.cantidadPuertas = cantidadPuertas;
         this.tipoCombustible = tipoCombustible;
@@ -42,14 +37,15 @@ public class Automovil extends Vehiculo {
         super.ingresarDatos(); // reutiliza el ingreso de datos comunes del padre
         String puertasTexto = JOptionPane.showInputDialog("Ingrese la cantidad de puertas:");
         cantidadPuertas = Integer.parseInt(puertasTexto);
-        tipoCombustible = JOptionPane.showInputDialog("Ingrese el tipo de combustible (Gasolina, Diesel, Eléctrico, Híbrido):");
+        tipoCombustible = JOptionPane
+                .showInputDialog("Ingrese el tipo de combustible (Gasolina, Diesel, Eléctrico, Híbrido):");
     }
 
     @Override
     public String mostrarDatos() {
         return "===== AUTOMÓVIL =====\n"
-             + super.mostrarDatos() + "\n"
-             + "Cantidad de puertas: " + cantidadPuertas + "\n"
-             + "Tipo de combustible: " + tipoCombustible;
+                + super.mostrarDatos() + "\n"
+                + "Cantidad de puertas: " + cantidadPuertas + "\n"
+                + "Tipo de combustible: " + tipoCombustible;
     }
 }

@@ -1,14 +1,8 @@
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
-/**
- * Clase principal: muestra el menú, crea los objetos
- * y administra la lista de vehículos mediante un ArrayList.
- */
 public class Main {
 
-    // ArrayList que almacena TODOS los vehículos, sin importar su tipo,
-    // gracias al polimorfismo (todos son "un" Vehiculo).
     static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -16,11 +10,11 @@ public class Main {
 
         do {
             String menu = "===== AUTOMUNDO S.A. DE C.V. =====\n"
-                        + "1. Registrar vehículo\n"
-                        + "2. Consultar vehículo\n"
-                        + "3. Eliminar vehículo\n"
-                        + "4. Mostrar todos los vehículos\n"
-                        + "5. Salir";
+                    + "1. Registrar vehículo\n"
+                    + "2. Consultar vehículo\n"
+                    + "3. Eliminar vehículo\n"
+                    + "4. Mostrar todos los vehículos\n"
+                    + "5. Salir";
             String opcionTexto = JOptionPane.showInputDialog(menu);
 
             if (opcionTexto == null) {
